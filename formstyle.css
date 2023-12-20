@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D071F9;
+    padding: 0 10px;
+}
+.container{
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.container .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #D071F9;
+    text-transform: uppercase;
+    text-align: center;
+}
+.container .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.container .form .input_field label{
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.container .form .input_field input,
+.container .form .input_field .Textarea
+{
+    outline: none;
+    border: 1px solid #D071F9;
+    padding: 7px 12px;
+    border-radius: 3px;
+}
+.container .form .input_field .Textarea{
+    resize: none;
+    height: 70px;
+}
+.container .form .input_field .selectbox{
+    position: relative;
+    width: 196px;
+    height: 36px;
+    border: 1px solid #D071F9;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+
+}
+.container .form .input_field .input:focus,
+.container .form .input_field .Textarea:focus,
+.container .form .input_field select:focus{
+    border: 1px solid purple;
+}
+.container .form .input_field_terms p{
+    font-size: 14px;
+    color: #757575;
+    margin-left: 235px;
+    /* margin-top: 20px; */
+}   
+.container .form .input_field_terms .check{
+    width: 20px;
+    height: 20px;
+    position:relative;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #D071F9;
+    /* margin-top: 20px; */
+}
+.container .form .input_field_terms .check input[type="checkbox"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.container .form .input_field_terms .check .checkmark{
+    width: 20px;
+    height: 20px ;
+    display: block;
+    position: relative;
+}
+.container .form .input_field_terms .check .checkmark:before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent white white ;
+    transform: rotate(-45deg);
+
+}
+
+.container .form .input_field_terms .check input[type="checkbox"]:checked ~ .checkmark{
+    background: #D071F9;
+
+}
+.container .form .input_field_terms .check input[type="checkbox"]:checked ~ .checkmark::before{
+    display: block;
+}
+.container .form .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    margin-top: 14px;
+    cursor: pointer;
+    border: 0;
+    background: #D071F9;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+}
+
+.container .form .input_field:last-child{
+    margin-bottom: 0;
+}
+.container .form .input_field .btn:hover{
+    background: purple;
+}
+.caste{
+    margin-right: 30px;
+}
+
+
+@media (max-width: 485px){
+    .container .form .input_field{
+       flex-direction: column;
+       /* align-items: center; */
+    }
+    .container .form .input_field label{
+        margin-left: 25px;
+        margin-bottom: 3px;
+    }
+    .container .form .terms{
+        flex-direction: row;
+    }
+    .container .form .terms p{
+        font-size: 15px;
+        width: 100%;
+        margin-left: 6px;
+        margin-top: 7px;
+    }
+    .container .form .input_field .Textarea{
+        height: 50px;
+        width: 250px;
+    }
+}
